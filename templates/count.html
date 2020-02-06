@@ -1,0 +1,17 @@
+<h1> COUNT </h1>
+<a href="{% url 'home' %}">Start again</a>
+<h2> Your text: </h2>
+{{ fulltext }}
+<br>
+<br>
+There are {{ count }} number of words in your text.
+<br>
+Most repeated : {{ sortedwordshigh }}
+<br>
+
+{% for word,total in sortedwords %}
+
+{{ word }} : {{ total }}
+<br>
+
+{% endfor %}
